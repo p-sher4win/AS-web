@@ -1,0 +1,137 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: none;
+}
+
+.nav-bg-color {
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav-logo img {
+  height: 80px;
+  width: auto;
+}
+
+@media (max-width: 767.98px) {
+  .nav-logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  .about-text{
+    font-size: 16px;
+  }
+}
+
+/* navbar menu no border */
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* mobile menu button */
+.menu-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/menu.png") no-repeat center center;
+  background-size: contain;
+  transition: background 0s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) .menu-icon {
+  background: url("../images/close.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* footer small text */
+.foot-sm-txt {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.small-text {
+  font-size: 14px;
+}
+.small-text-2 {
+  font-size: 12px;
+}
+
+/* hero section */
+.hero-bg {
+  position: relative;
+  min-height: 350px;
+  background-image: url('../images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-bg {
+    min-height: 600px;
+  }
+
+  .about-text{
+    font-size: 20px;
+  }
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-bg>* {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
+  animation: float 2s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.justify-text{
+  text-align: justify;
+}
